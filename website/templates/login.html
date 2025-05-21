@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<style>
+    .signup-container {
+        width: 800px;
+        margin: 50px auto;
+        background-color: var(--form-bg-color);
+        color: var(--form-text-color);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: none;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: inherit;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        background-color: transparent;
+        color: var(--form-text-color);
+        border: 1px solid #ccc;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .form-control::placeholder {
+        color: #888;
+    }
+
+    .btn-primary {
+        width: 100%;
+        border-radius: 10px;
+        background-color: #4a90e2;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #357ab8;
+    }
+
+    label {
+        font-weight: 500;
+        color: var(--form-text-color);
+    }
+    .app-info  h1{
+        font-weight: bolder;
+        margin-left: 100px;
+        margin-top:150px;
+
+}
+    .app-info  h6{
+        margin-left: 100px;
+        margin-top:15px;
+
+}
+.bigcontainer{
+    display: flex;
+    gap:40px;
+}
+</style>
+<div class="bigcontainer ">
+<div class="app-info">
+    <h1>📋 Welcome Back! </h1>
+    <h6>Track your tasks, 🛠️ manage project notes, and 🌍 stay productive anywhere, anytime!</h6>
+    
+</div>
+<div class="form-container signup-container">
+    <form method="post">
+        <h3 class="text-center">Login</h3>
+
+        <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter the password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+</div>
+{% endblock %}

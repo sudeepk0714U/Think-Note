@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<style>
+    .signup-container {
+        width: 600px;
+        margin: 50px auto;
+        background-color: var(--form-bg-color);
+        color: var(--form-text-color);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: none;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: inherit;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        background-color: transparent;
+        color: var(--form-text-color);
+        border: 1px solid #ccc;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .form-control::placeholder {
+        color: #888;
+    }
+
+    .btn-primary {
+        width: 100%;
+        border-radius: 10px;
+        background-color: #4a90e2;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #357ab8;
+    }
+
+    label {
+        font-weight: 500;
+        color: var(--form-text-color);
+    }
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    .footer a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    .bigcontainer{
+    display: flex;
+    gap:40px;
+}
+    .appintro {
+        font-weight: bolder;
+        margin-left: 100px;
+        margin-top:150px;
+}
+.p1{
+    font-size: 38px;
+}
+</style>
+
+<div class="bigcontainer">
+    <div class="appintro">
+        <p class = "p1">🚀 Boost Your Productivity</p>
+        <p class="p2">📝 Organize tasks, 🗂️ manage notes, and 🌐 access them anytime, anywhere with ease.</p>
+    </div>
+<div class="form-container signup-container">
+    <form method="post">
+        <h3 class="text-center">Sign Up</h3>
+
+        <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter Your First Name">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="password1">Password</label>
+            <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter the password">
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="password2">Confirm Password</label>
+            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+
+
+{% endblock %}
+<footer class="footer">
+    <p>&copy; 2025 Sudeep Kumar | 
+        Email: <a href="mailto:sudeepkkumar696@gmail.com">sudeepkkumar696@gmail.com</a> | 
+        Phone: <a href="tel:+917013680993">+91 7013680993</a>
+    </p>
+</footer>
